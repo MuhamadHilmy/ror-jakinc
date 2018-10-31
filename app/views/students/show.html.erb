@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<strong>Name :</strong>
+	<%= @student.name %>
+</p>
+
+<p>
+	<strong>Age :</strong>
+	<%= @student.age %>
+</p>
+
+<p>
+	<strong>Grade :</strong>
+	<%= @student.grade %>
+</p>
+
+<div style="height: 300px;">
+	<%= image_tag @student.image, style: "width:300px;height:auto;"%>
+</div>
+
+<div align="center">
+	<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-warning" %>
+	<%= link_to 'Back', students_path, class: "btn btn-danger" %>		
+</div>

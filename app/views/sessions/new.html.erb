@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+	<div class="col-sm-4">
+		<div align="center" class="login-panel" id="login-panel">
+			<div style="padding: 20px;">
+				<%= form_for(:session, url: login_path) do |f| %>
+				<div style="margin-bottom: 30px;color: white">
+					<i class="material-icons" style="font-size: 90px">account_circle</i>
+					<h1 style="margin-top: -15px">Login</h1>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text"><i class="material-icons">mail</i></div>
+						</div>
+						<%= f.email_field :email, :placeholder => "Email", class: "form-control", style: "width:200px;" %>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text"><i class="material-icons">lock</i></div>
+						</div>
+						<%= f.password_field :password, :placeholder => "Password", class: "form-control", style: "width:200px" %>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div align="center" style="margin-top: 30px;">
+						<%= f.submit "Login", class: "btn btn-primary btn-submit", style: "width:200px;" %>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
